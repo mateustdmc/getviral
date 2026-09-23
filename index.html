@@ -3,22 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Método Viral no Google — Apareça no topo e viralize</title>
-<meta name="description" content="Aprenda a colocar seu conteúdo, seu perfil ou seu negócio nas primeiras posições do Google e receba visitas todos os dias.">
-<meta property="og:title" content="Método Viral no Google">
-<meta property="og:description" content="Seja encontrado. Viralize no Google.">
-<meta name="theme-color" content="#0C0B09">
+<title>Método Viral — Viralize e ganhe seguidores no Instagram</title>
+<meta name="description" content="Aprenda a criar Reels que viralizam e a transformar visualizações em seguidores reais no Instagram.">
+<meta property="og:title" content="Método Viral — Instagram">
+<meta property="og:description" content="Viralize e ganhe seguidores de verdade no Instagram.">
+<meta name="theme-color" content="#FBF8F4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
-  --bg:#0C0B09; --bg2:#13110D; --card:#16140F; --card2:#1F1B14;
-  --line:#221F1A; --line2:#2A2620; --line3:#3A342A;
-  --text:#F4EFE6; --text2:#D9CFBF; --muted:#B8AE9E; --muted2:#8F8676;
-  --accent:#E9B949; --accent-hover:#F6D27E; --accent-soft:#241F15;
+  --bg:#FBF8F4; --bg2:#F4EEE7; --card:#FFFFFF;
+  --line:#ECE4DA; --line2:#E2D8CC;
+  --text:#1A1714; --text2:#3A332D; --muted:#6B6158; --muted2:#8A7F74;
+  --accent:#C2375C; --accent-hover:#A82C4E; --accent-soft:#FBE6EC; --accent-soft2:#F7D3DD;
   --serif:'Instrument Serif',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,sans-serif;
   --pad:clamp(20px,11vw,160px);
+  --shadow:0 30px 70px rgba(60,35,20,.10);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -27,55 +28,68 @@ a{color:var(--accent);text-decoration:none}
 h1,h2,h3,p{margin:0}
 .serif{font-family:var(--serif);font-weight:400}
 .it{font-style:italic}
-.gold{color:var(--accent)}
+.rose{color:var(--accent)}
 .dim{color:var(--muted2)}
 svg{flex-shrink:0}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:999px;font-weight:800;min-height:48px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
-.btn-gold{background:var(--accent);color:var(--bg);padding:20px 32px;font-size:17px}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(233,185,73,.28);background:var(--accent-hover)}
-.btn-ghost{border:1px solid var(--line3);color:var(--text2);padding:19px 26px;font-weight:600;font-size:16px}
+.btn-main{background:var(--accent);color:#fff;padding:20px 32px;font-size:17px;box-shadow:0 10px 28px rgba(194,55,92,.25)}
+.btn-main:hover{transform:translateY(-2px);background:var(--accent-hover);box-shadow:0 16px 40px rgba(194,55,92,.32)}
+.btn-ghost{border:1px solid var(--line2);background:var(--card);color:var(--text2);padding:19px 26px;font-weight:600;font-size:16px}
 .btn-ghost:hover{border-color:var(--accent);color:var(--text)}
-.btn-dark{background:var(--bg);color:var(--text);padding:22px 36px;font-size:18px}
+.btn-dark{background:var(--text);color:#fff;padding:22px 36px;font-size:18px}
 .btn-dark:hover{transform:translateY(-2px)}
 
 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line3);border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text2)}
+.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:8px 16px;background:var(--card);border:1px solid var(--line2);border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text2)}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
 
 /* Nav */
-header{display:flex;align-items:center;justify-content:space-between;padding:22px var(--pad);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:rgba(12,11,9,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px var(--pad);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:rgba(251,248,244,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .logo{display:flex;align-items:center;gap:12px;color:var(--text);font-weight:800;font-size:17px;letter-spacing:.02em}
-.logo-mark{width:36px;height:36px;border-radius:10px;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center}
+.logo-mark{width:36px;height:36px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center}
 .logo .serif{font-size:21px;color:var(--accent)}
 nav{display:flex;align-items:center;gap:36px;font-size:15px}
 nav .link{color:var(--muted)}
 nav .link:hover{color:var(--text)}
-nav .btn{padding:12px 22px;font-size:15px;font-weight:700}
+nav .btn{padding:12px 22px;font-size:15px;font-weight:700;box-shadow:none}
 
 /* Hero */
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding:110px var(--pad) 120px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center;padding:100px var(--pad) 110px}
 .hero-copy{display:flex;flex-direction:column;gap:28px}
-.hero h1{font-size:clamp(52px,6vw,84px);line-height:.98;letter-spacing:-.01em}
-.lead{font-size:20px;line-height:1.6;color:var(--muted);max-width:520px}
+.hero h1{font-size:clamp(52px,6vw,86px);line-height:.98;letter-spacing:-.01em}
+.lead{font-size:20px;line-height:1.6;color:var(--muted);max-width:540px}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:8px}
-.checks{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px;color:var(--muted2)}
+.checks{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px;color:var(--muted)}
 .checks span{display:inline-flex;align-items:center;gap:8px}
 
-.mock-wrap{position:relative}
-.mock-back{position:absolute;top:40px;left:60px;right:20px;bottom:-20px;border-radius:32px;border:1px solid var(--line2);transform:rotate(-3deg)}
-.mock{position:relative;padding:28px;border-radius:28px;background:var(--card);border:1px solid var(--line2);display:flex;flex-direction:column;gap:18px;box-shadow:0 40px 80px rgba(0,0,0,.45)}
-.search{display:flex;align-items:center;gap:12px;padding:16px 20px;border-radius:999px;background:var(--bg);border:1px solid var(--line2);font-size:16px;color:var(--text2)}
-.result{position:relative;padding:22px 24px;border-radius:18px;background:var(--card2);border:1.5px solid var(--accent);display:flex;flex-direction:column;gap:8px}
-.badge{position:absolute;top:-14px;right:20px;padding:5px 12px;border-radius:999px;background:var(--accent);color:var(--bg);font-size:12px;font-weight:800;letter-spacing:.08em}
-.result .url{font-size:13px;color:var(--muted2)}
-.result .title{font-size:21px;font-weight:700}
-.result .desc{font-size:14px;line-height:1.55;color:var(--muted)}
-.skel{padding:8px 24px 10px;display:flex;flex-direction:column;gap:10px}
-.skel i{display:block;height:10px;border-radius:6px;background:var(--line2)}
-.skel i:nth-child(2){height:14px;background:#332E26}
-.stat{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-radius:16px;background:var(--bg);border:1px solid var(--line2);font-size:14px;color:var(--muted)}
+/* Phone mockup */
+.phone-wrap{position:relative;display:flex;justify-content:center}
+.blob{position:absolute;width:420px;height:420px;border-radius:50%;background:var(--accent-soft);top:50%;left:50%;transform:translate(-50%,-50%)}
+.phone{position:relative;width:320px;padding:14px;border-radius:44px;background:var(--text);box-shadow:var(--shadow)}
+.screen{border-radius:32px;background:var(--card);overflow:hidden;display:flex;flex-direction:column}
+.profile{padding:26px 22px 18px;display:flex;flex-direction:column;gap:16px}
+.prow{display:flex;align-items:center;gap:16px}
+.avatar{width:68px;height:68px;border-radius:50%;padding:3px;border:2.5px solid var(--accent)}
+.avatar i{display:block;width:100%;height:100%;border-radius:50%;background:var(--bg2)}
+.handle{font-weight:800;font-size:16px}
+.bio{font-size:13px;color:var(--muted);margin-top:4px}
+.bars{display:flex;flex-direction:column;gap:7px}
+.bars i{display:block;height:8px;border-radius:5px;background:var(--bg2)}
+.follow{display:flex;align-items:center;justify-content:center;height:36px;border-radius:10px;background:var(--accent);color:#fff;font-size:13px;font-weight:700}
+.feed{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.feed div{aspect-ratio:1/1.25;background:var(--bg2);position:relative}
+.feed div:nth-child(2){background:var(--accent-soft2)}
+.feed div:nth-child(4){background:#EFE3D6}
+.feed div:nth-child(6){background:var(--accent-soft)}
+.feed .play{position:absolute;top:8px;right:8px}
+.notif{position:absolute;display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:0 18px 40px rgba(60,35,20,.12);font-size:14px;font-weight:600;white-space:nowrap}
+.notif .ic{width:36px;height:36px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center}
+.notif small{display:block;font-weight:500;color:var(--muted2);font-size:12px;margin-top:2px}
+.n1{top:-24px;left:-30px}
+.n2{bottom:110px;right:-50px}
+.n3{bottom:20px;left:-20px}
 
 /* Problem */
 .problem{padding:96px var(--pad);background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -90,45 +104,44 @@ nav .btn{padding:12px 22px;font-size:15px;font-weight:700}
 .h2{font-size:clamp(42px,4.5vw,64px);line-height:1.02}
 .sec-head p{max-width:360px;font-size:17px;line-height:1.6;color:var(--muted)}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{padding:36px 32px;border-radius:24px;background:var(--card);border:1px solid var(--line2);display:flex;flex-direction:column;gap:16px;transition:border-color .2s ease,transform .2s ease}
-.card:hover{border-color:var(--line3);transform:translateY(-3px)}
+.card{padding:36px 32px;border-radius:24px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:16px;transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--line2)}
 .card .num{font-family:var(--serif);font-size:44px;color:var(--accent);line-height:1}
 .card h3{font-size:21px;font-weight:700}
 .card p{font-size:15px;line-height:1.6;color:var(--muted)}
 
 /* How */
-.how{margin:0 var(--pad);padding:80px 72px;border-radius:32px;background:var(--card);border:1px solid var(--line2);display:flex;flex-direction:column;gap:56px}
+.how{margin:0 var(--pad);padding:80px 72px;border-radius:32px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:56px}
 .how .center{display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center}
 .how .grid3{gap:48px}
 .step{display:flex;flex-direction:column;gap:14px}
-.step .n{width:52px;height:52px;border-radius:50%;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent)}
+.step .n{width:52px;height:52px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent)}
 .step h3{font-size:21px;font-weight:700}
 .step p{font-size:15px;line-height:1.6;color:var(--muted)}
 
 /* For whom */
 .who{padding:130px var(--pad) 110px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.who-box{padding:48px;border-radius:28px;border:1px solid var(--line3);display:flex;flex-direction:column;gap:24px}
-.who-box.no{background:var(--bg2);border-color:var(--line)}
+.who-box{padding:48px;border-radius:28px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:24px}
+.who-box.no{background:var(--bg2)}
 .who-box h3{font-size:40px}
 .who-box.no h3{color:var(--muted)}
 .list{display:flex;flex-direction:column;gap:16px;font-size:16px;line-height:1.5;color:var(--text2)}
-.who-box.no .list{color:#A89F90}
+.who-box.no .list{color:var(--muted)}
 .list div{display:flex;gap:12px}
 .list svg{margin-top:2px}
 
 /* Offer */
 .offer-wrap{padding:0 var(--pad) 130px;display:flex;justify-content:center}
-.offer{width:100%;max-width:760px;padding:64px;border-radius:36px;background:var(--card);border:1.5px solid var(--accent);display:flex;flex-direction:column;gap:32px;align-items:center;text-align:center;box-shadow:0 50px 120px rgba(233,185,73,.08)}
+.offer{width:100%;max-width:760px;padding:64px;border-radius:36px;background:var(--card);border:1.5px solid var(--accent);display:flex;flex-direction:column;gap:32px;align-items:center;text-align:center;box-shadow:0 40px 100px rgba(194,55,92,.12)}
 .offer .tag{padding:8px 18px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .offer h2{font-size:clamp(40px,4vw,56px);line-height:1.02}
-.includes{width:100%;display:flex;flex-direction:column;gap:14px;text-align:left;font-size:16px;color:var(--text2);padding:28px 0;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.includes{width:100%;display:flex;flex-direction:column;gap:14px;text-align:left;font-size:16px;color:var(--text2);padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .includes div{display:flex;align-items:flex-start;gap:12px}
 .price{display:flex;flex-direction:column;gap:6px;align-items:center}
 .price .old{font-size:15px;color:var(--muted2)}
-.price .old s{text-decoration:line-through}
 .price .now{font-family:var(--serif);font-size:clamp(52px,6vw,80px);line-height:1}
 .price .inst{font-size:15px;color:var(--muted)}
-.offer .btn-gold{width:100%;padding:24px 32px;font-size:19px}
+.offer .btn-main{width:100%;padding:24px 32px;font-size:19px}
 .guarantee{display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.5;color:var(--muted);text-align:left}
 
 /* FAQ */
@@ -138,19 +151,19 @@ nav .btn{padding:12px 22px;font-size:15px;font-weight:700}
 details{border-top:1px solid var(--line2);padding:26px 0}
 summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:19px;font-weight:700;min-height:44px}
 summary::-webkit-details-marker{display:none}
-summary .plus{width:32px;height:32px;border-radius:50%;border:1px solid var(--line3);display:flex;align-items:center;justify-content:center;transition:transform .2s ease,border-color .2s ease}
+summary .plus{width:32px;height:32px;border-radius:50%;border:1px solid var(--line2);background:var(--card);display:flex;align-items:center;justify-content:center;transition:transform .2s ease,border-color .2s ease}
 details[open] summary .plus{transform:rotate(45deg);border-color:var(--accent)}
 details p{margin-top:12px;font-size:16px;line-height:1.6;color:var(--muted)}
 
 /* Final CTA */
-.final{margin:0 var(--pad) 100px;padding:96px 80px;border-radius:36px;background:var(--accent);color:var(--bg);display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center}
+.final{margin:0 var(--pad) 100px;padding:96px 80px;border-radius:36px;background:var(--accent);color:#fff;display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center}
 .final h2{font-size:clamp(42px,5vw,72px);line-height:1}
-.final p{font-size:19px;line-height:1.6;max-width:620px;color:#2A2418}
+.final p{font-size:19px;line-height:1.6;max-width:620px;color:#FFE9EF}
 
-footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:14px;line-height:1.5;color:var(--muted2)}
+footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:14px;line-height:1.5;color:var(--muted)}
 
 /* Floating WhatsApp */
-.float{position:fixed;right:28px;bottom:28px;width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 16px 40px rgba(0,0,0,.5);z-index:30;transition:transform .18s ease}
+.float{position:fixed;right:28px;bottom:28px;width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 16px 40px rgba(194,55,92,.35);z-index:30;transition:transform .18s ease}
 .float:hover{transform:scale(1.06)}
 .float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);animation:pulse 2.2s ease-out infinite}
 @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
@@ -158,13 +171,16 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
 /* Reveal on scroll */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.float::before{animation:none}html{scroll-behavior:auto}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.notif{animation:floaty 5s ease-in-out infinite}
+.n2{animation-delay:1.2s}.n3{animation-delay:2.4s}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.float::before,.notif{animation:none}html{scroll-behavior:auto}}
 
 /* Tablet */
 @media (max-width:1100px){
   nav .link{display:none}
-  .hero,.problem{grid-template-columns:1fr;gap:56px}
-  .hero{padding-top:72px;padding-bottom:80px}
+  .hero,.problem{grid-template-columns:1fr;gap:64px}
+  .hero{padding-top:72px;padding-bottom:90px}
   .grid3{grid-template-columns:1fr 1fr}
   .how .grid3{grid-template-columns:1fr}
   .how{padding:56px 40px}
@@ -176,17 +192,20 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
   header{padding:14px 20px}
   .logo{font-size:15px}.logo .serif{font-size:18px}.logo-mark{width:32px;height:32px}
   nav .btn{padding:10px 18px;font-size:14px}
-  .hero{padding:44px 20px 56px;gap:40px}
+  .hero{padding:44px 20px 64px;gap:48px}
   .lead{font-size:17px}
   .actions .btn{width:100%}
-  .btn-gold{padding:19px 24px;font-size:16px}
+  .btn-main{padding:19px 24px;font-size:16px}
   .pill{font-size:11px;padding:7px 14px}
-  .mock{padding:18px;border-radius:22px;gap:14px}
-  .mock-back{display:none}
-  .search{font-size:13px;padding:12px 16px}
-  .result{padding:18px}
-  .result .title{font-size:17px}
-  .result .desc{display:none}
+  .blob{width:300px;height:300px}
+  .phone{width:260px;border-radius:38px;padding:11px}
+  .screen{border-radius:28px}
+  .notif{padding:10px 14px;font-size:12px;gap:10px;border-radius:14px}
+  .notif .ic{width:30px;height:30px}
+  .notif small{font-size:11px}
+  .n1{top:-18px;left:-6px}
+  .n2{bottom:120px;right:-6px}
+  .n3{display:none}
   .problem{padding:56px 20px;gap:22px}
   .problem .txt{font-size:16px}
   .section{padding:64px 20px;gap:32px}
@@ -206,7 +225,7 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
   .offer-wrap{padding:0 20px 64px}
   .offer{padding:40px 24px;gap:24px;border-radius:28px}
   .includes{font-size:15px;padding:20px 0}
-  .offer .btn-gold{padding:20px;font-size:16px}
+  .offer .btn-main{padding:20px;font-size:16px}
   .faq{padding:0 20px 64px}
   summary{font-size:17px}
   details p{font-size:15px}
@@ -221,18 +240,18 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
 <body>
 
 <header>
-  <a class="logo" href="#topo" aria-label="Método Viral no Google — início">
+  <a class="logo" href="#topo" aria-label="Método Viral — início">
     <span class="logo-mark">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color:var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
     </span>
-    <span>Método Viral <span class="serif it">no Google</span></span>
+    <span>Método <span class="serif it">Viral</span></span>
   </a>
   <nav>
     <a class="link" href="#conteudo">O que você aprende</a>
     <a class="link" href="#como">Como funciona</a>
     <a class="link" href="#oferta">Oferta</a>
     <a class="link" href="#faq">Dúvidas</a>
-    <a class="btn btn-gold wa" href="https://wa.me/5521986115711?text=Quero%20aprender%20a%20viralizar!" target="_blank" rel="noopener">Quero entrar</a>
+    <a class="btn btn-main wa" href="https://wa.me/5521986115711?text=Quero%20aprender%20a%20viralizar!" target="_blank" rel="noopener">Quero entrar</a>
   </nav>
 </header>
 
@@ -241,53 +260,70 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
 <!-- HERO -->
 <section class="hero">
   <div class="hero-copy">
-    <div class="pill"><span class="dot"></span>Método passo a passo</div>
-    <h1 class="serif">Seja encontrado. <span class="it gold">Viralize</span> no Google.</h1>
-    <p class="lead">Aprenda a colocar seu conteúdo, seu perfil ou seu negócio nas primeiras posições do Google e receba visitas todos os dias — sem depender só do algoritmo das redes sociais.</p>
+    <div class="pill"><span class="dot"></span>Instagram · Reels · Crescimento</div>
+    <h1 class="serif">Viralize no Instagram e <span class="it rose">ganhe seguidores</span> de verdade.</h1>
+    <p class="lead">Aprenda a criar Reels que prendem a atenção, entram no Explorar e transformam visualizações em seguidores reais — mesmo começando do zero.</p>
     <div class="actions">
-      <a class="btn btn-gold wa" href="https://wa.me/5521986115711?text=Quero%20aprender%20a%20viralizar!" target="_blank" rel="noopener">
+      <a class="btn btn-main wa" href="https://wa.me/5521986115711?text=Quero%20aprender%20a%20viralizar!" target="_blank" rel="noopener">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
         Quero aprender a viralizar
       </a>
       <a class="btn btn-ghost" href="#conteudo">Ver o conteúdo</a>
     </div>
     <div class="checks">
-      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Acesso imediato</span>
-      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Para iniciantes</span>
-      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte no WhatsApp</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Acesso imediato</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Para iniciantes</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte no WhatsApp</span>
     </div>
   </div>
 
-  <div class="mock-wrap" aria-hidden="true">
-    <div class="mock-back"></div>
-    <div class="mock">
-      <div class="search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8F8676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        como resolver [o problema do seu público]
+  <div class="phone-wrap" aria-hidden="true">
+    <div class="blob"></div>
+    <div class="phone">
+      <div class="screen">
+        <div class="profile">
+          <div class="prow">
+            <div class="avatar"><i></i></div>
+            <div>
+              <div class="handle">@seuperfil</div>
+              <div class="bio">Seu nicho · sua marca</div>
+            </div>
+          </div>
+          <div class="bars"><i style="width:90%"></i><i style="width:64%"></i></div>
+          <div class="follow">Seguir</div>
+        </div>
+        <div class="feed">
+          <div></div>
+          <div><svg class="play" width="16" height="16" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
+          <div></div>
+          <div><svg class="play" width="16" height="16" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
+          <div></div>
+          <div><svg class="play" width="16" height="16" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
+        </div>
       </div>
-      <div class="result">
-        <div class="badge">1º LUGAR</div>
-        <div class="url">seusite.com.br › seu-conteudo</div>
-        <div class="title">Seu conteúdo aqui, no topo da busca</div>
-        <div class="desc">É aqui que as pessoas clicam primeiro. O método mostra como chegar nessa posição e se manter nela.</div>
-      </div>
-      <div class="skel" style="opacity:.55"><i style="width:38%"></i><i style="width:78%"></i><i style="width:92%"></i></div>
-      <div class="skel" style="opacity:.35"><i style="width:32%"></i><i style="width:66%"></i><i style="width:86%"></i></div>
-      <div class="stat">
-        <span>Visitas vindas da busca</span>
-        <svg width="140" height="36" viewBox="0 0 140 36" fill="none" stroke="#E9B949" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 32 22 28 40 30 58 22 78 20 96 12 116 10 138 3"/></svg>
-      </div>
+    </div>
+    <div class="notif n1">
+      <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span>
+      <span>Novos seguidores<small>começaram a seguir você</small></span>
+    </div>
+    <div class="notif n2">
+      <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></span>
+      <span>Seu Reels está em alta<small>alcance acima do normal</small></span>
+    </div>
+    <div class="notif n3">
+      <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+      <span>Curtidas e comentários<small>no seu último post</small></span>
     </div>
   </div>
 </section>
 
 <!-- PROBLEM -->
 <section class="problem">
-  <h2 class="serif reveal">Você posta, posta, posta… <span class="it dim">e ninguém encontra.</span></h2>
+  <h2 class="serif reveal">Você posta todo dia… <span class="it dim">e continua com os mesmos seguidores.</span></h2>
   <div class="txt reveal">
-    <p>Nas redes sociais, um post dura algumas horas. Depois some do feed e o trabalho vai junto.</p>
-    <p>No Google é diferente: quando o seu conteúdo aparece no topo, ele é encontrado <strong>todos os dias</strong>, por pessoas que já estão procurando exatamente o que você oferece.</p>
-    <p style="color:var(--text);font-weight:600">Este método ensina como chegar lá — do zero.</p>
+    <p>Poucas visualizações, quase nenhum compartilhamento e a sensação de que o algoritmo está contra você.</p>
+    <p>O problema não é falta de esforço. Quem viraliza segue uma <strong>estrutura</strong>: gancho certo, roteiro certo e o formato que o Instagram mais distribui.</p>
+    <p style="color:var(--text);font-weight:600">Este método ensina essa estrutura — passo a passo.</p>
   </div>
 </section>
 
@@ -296,17 +332,17 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
   <div class="sec-head reveal">
     <div>
       <span class="eyebrow">O que você vai aprender</span>
-      <h2 class="serif h2">Tudo para sair do zero <span class="it">e ir para o topo</span></h2>
+      <h2 class="serif h2">Do perfil parado <span class="it">ao Reels viral</span></h2>
     </div>
-    <p>Aulas diretas, em ordem, para você aplicar enquanto assiste.</p>
+    <p>Aulas diretas, em ordem, para você aplicar no seu perfil enquanto assiste.</p>
   </div>
   <div class="grid3">
-    <article class="card reveal"><span class="num">01</span><h3>Descobrir o que as pessoas buscam</h3><p>Como encontrar as palavras e perguntas com procura real no seu nicho, antes de criar qualquer conteúdo.</p></article>
-    <article class="card reveal"><span class="num">02</span><h3>Títulos que ganham o clique</h3><p>A estrutura de título e descrição que faz a pessoa escolher o seu resultado entre todos os outros.</p></article>
-    <article class="card reveal"><span class="num">03</span><h3>Conteúdo que o Google prioriza</h3><p>Como escrever e organizar o conteúdo para responder melhor que a concorrência e subir de posição.</p></article>
-    <article class="card reveal"><span class="num">04</span><h3>Aparecer no Discover</h3><p>O feed de notícias do celular que pode levar milhares de visitas a um único conteúdo em poucas horas.</p></article>
-    <article class="card reveal"><span class="num">05</span><h3>Vídeos e imagens na busca</h3><p>Como fazer seus vídeos e imagens aparecerem nos resultados e ocuparem mais espaço na página.</p></article>
-    <article class="card reveal"><span class="num">06</span><h3>Transformar visitas em vendas</h3><p>Como levar quem chegou pelo Google para o seu WhatsApp, sua loja ou seu produto.</p></article>
+    <article class="card reveal"><span class="num">01</span><h3>Perfil que faz seguir</h3><p>Foto, nome, bio e destaques ajustados para quem visita o seu perfil apertar “Seguir”.</p></article>
+    <article class="card reveal"><span class="num">02</span><h3>Descobrir o que viraliza no seu nicho</h3><p>Como encontrar temas e formatos que já estão funcionando e adaptar para o seu jeito.</p></article>
+    <article class="card reveal"><span class="num">03</span><h3>Ganchos dos 3 primeiros segundos</h3><p>As aberturas que fazem a pessoa parar de rolar o feed e assistir até o final.</p></article>
+    <article class="card reveal"><span class="num">04</span><h3>Roteiros de Reels prontos</h3><p>Estruturas simples para gravar com o celular, sem precisar de equipamento caro.</p></article>
+    <article class="card reveal"><span class="num">05</span><h3>Entendendo o algoritmo</h3><p>Frequência, horários, retenção e compartilhamentos: o que faz o Instagram entregar mais o seu conteúdo.</p></article>
+    <article class="card reveal"><span class="num">06</span><h3>Seguidores que viram clientes</h3><p>Como usar Stories, Direct e chamadas para transformar a audiência em vendas.</p></article>
   </div>
 </section>
 
@@ -314,12 +350,12 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
 <section id="como" class="how reveal">
   <div class="center">
     <span class="eyebrow">Como funciona</span>
-    <h2 class="serif h2" style="font-size:clamp(38px,4vw,56px)">Três passos até o seu <span class="it gold">primeiro topo</span></h2>
+    <h2 class="serif h2" style="font-size:clamp(38px,4vw,56px)">Três passos até o seu <span class="it rose">primeiro viral</span></h2>
   </div>
   <div class="grid3">
     <div class="step"><div class="n">1</div><div><h3>Chame no WhatsApp</h3><p>Clique no botão, tire suas dúvidas e garanta sua vaga direto comigo.</p></div></div>
-    <div class="step"><div class="n">2</div><div><h3>Assista e aplique</h3><p>Siga as aulas na ordem e aplique cada etapa no seu próprio conteúdo.</p></div></div>
-    <div class="step"><div class="n">3</div><div><h3>Seja encontrado</h3><p>Publique, acompanhe suas posições e repita o que funciona para crescer.</p></div></div>
+    <div class="step"><div class="n">2</div><div><h3>Assista e aplique</h3><p>Siga as aulas na ordem e ajuste seu perfil e seus Reels a cada etapa.</p></div></div>
+    <div class="step"><div class="n">3</div><div><h3>Poste e cresça</h3><p>Publique com a estrutura certa, acompanhe os resultados e repita o que funciona.</p></div></div>
   </div>
 </section>
 
@@ -328,18 +364,18 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
   <div class="who-box reveal">
     <h3 class="serif">É para você se…</h3>
     <div class="list">
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cria conteúdo e quer que ele seja visto por mais gente</div>
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tem um negócio e quer clientes chegando pela busca</div>
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Está cansado de depender só do algoritmo das redes</div>
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Está começando agora e quer um caminho claro</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Quer crescer no Instagram e ser reconhecido no seu nicho</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tem um negócio e quer clientes vindo pelo perfil</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Posta com frequência, mas os números não saem do lugar</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Está começando agora e quer um caminho claro</div>
     </div>
   </div>
   <div class="who-box no reveal">
     <h3 class="serif">Não é para você se…</h3>
     <div class="list">
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8F8676" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Procura um botão mágico sem colocar nada em prática</div>
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8F8676" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Não tem nenhum tempo para aplicar as aulas</div>
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8F8676" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Quer atalhos que violam as regras do Google</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A7F74" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Procura um botão mágico sem colocar nada em prática</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A7F74" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Não tem tempo para gravar e postar</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A7F74" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Quer atalhos que colocam sua conta em risco</div>
     </div>
   </div>
 </section>
@@ -348,24 +384,24 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
 <section id="oferta" class="offer-wrap">
   <div class="offer reveal">
     <span class="tag">Acesso completo</span>
-    <h2 class="serif">Método Viral <span class="it gold">no Google</span></h2>
+    <h2 class="serif">Método <span class="it rose">Viral</span></h2>
     <div class="includes">
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Todas as aulas do método (6 módulos)</div>
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Modelos de títulos e estruturas de conteúdo</div>
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte para dúvidas pelo WhatsApp</div>
-      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>[SEU BÔNUS AQUI]</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Todas as aulas do método (6 módulos)</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Modelos de ganchos e roteiros de Reels</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte para dúvidas pelo WhatsApp</div>
+      <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>[SEU BÔNUS AQUI]</div>
     </div>
     <div class="price">
       <span class="old">De <s>R$ [PREÇO CHEIO]</s> por</span>
       <span class="now">R$ [SEU PREÇO]</span>
       <span class="inst">ou [N]x de R$ [VALOR]</span>
     </div>
-    <a class="btn btn-gold wa" href="https://wa.me/5521986115711?text=Quero%20aprender%20a%20viralizar!" target="_blank" rel="noopener">
+    <a class="btn btn-main wa" href="https://wa.me/5521986115711?text=Quero%20aprender%20a%20viralizar!" target="_blank" rel="noopener">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
       Quero aprender a viralizar
     </a>
     <div class="guarantee">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       Garantia de [X] dias: não gostou, devolvemos seu dinheiro.
     </div>
   </div>
@@ -379,30 +415,30 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
   </div>
   <div class="faq-list reveal">
     <details>
-      <summary>Preciso ter um site?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
-      <p>Não precisa começar com um. O método mostra as opções para aparecer no Google com o que você já tem e como evoluir a partir daí.</p>
+      <summary>Preciso aparecer nos vídeos?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+      <p>Não é obrigatório. O método mostra formatos para quem aparece e para quem prefere não mostrar o rosto.</p>
     </details>
     <details>
-      <summary>Serve para iniciantes?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
-      <p>Sim. As aulas começam do básico e seguem uma ordem pensada para quem nunca trabalhou com Google.</p>
+      <summary>Funciona com poucos seguidores?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+      <p>Sim. Os Reels são mostrados também para quem ainda não te segue, então um perfil pequeno pode alcançar muita gente com o conteúdo certo.</p>
     </details>
     <details>
-      <summary>Como recebo o acesso?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+      <summary>Como recebo o acesso?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
       <p>Clique no botão, fale comigo no WhatsApp e, após a confirmação do pagamento, você recebe o acesso na hora.</p>
     </details>
     <details>
-      <summary>Quanto tempo leva para ver resultado?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
-      <p>Depende do seu nicho e da sua dedicação. O importante é aplicar cada etapa com consistência — o método mostra como acompanhar sua evolução.</p>
+      <summary>Quanto tempo leva para ver resultado?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C2375C" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+      <p>Depende do seu nicho e da sua constância. O importante é aplicar cada etapa e postar com frequência — o método mostra como acompanhar sua evolução.</p>
     </details>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final reveal">
-  <h2 class="serif">Seu conteúdo merece <span class="it">ser encontrado.</span></h2>
-  <p>Chame agora no WhatsApp e descubra como colocar o que você faz no topo do Google.</p>
+  <h2 class="serif">Seu próximo Reels pode ser <span class="it">o que viraliza.</span></h2>
+  <p>Chame agora no WhatsApp e descubra como fazer seu perfil crescer no Instagram.</p>
   <a class="btn btn-dark wa" href="https://wa.me/5521986115711?text=Quero%20aprender%20a%20viralizar!" target="_blank" rel="noopener">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E9B949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
     Falar no WhatsApp
   </a>
 </section>
@@ -410,12 +446,12 @@ footer{padding:36px var(--pad);border-top:1px solid var(--line);display:flex;jus
 </main>
 
 <footer>
-  <span>© <span id="ano">2026</span> Método Viral no Google. Todos os direitos reservados.</span>
-  <span>Este produto não é afiliado nem endossado pelo Google.</span>
+  <span>© <span id="ano">2026</span> Método Viral. Todos os direitos reservados.</span>
+  <span>Este produto não é afiliado nem endossado pelo Instagram ou pela Meta.</span>
 </footer>
 
 <a class="float wa" href="https://wa.me/5521986115711?text=Quero%20aprender%20a%20viralizar!" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0C0B09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
 </a>
 
 <script>
